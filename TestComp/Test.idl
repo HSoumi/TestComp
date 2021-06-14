@@ -1,0 +1,9 @@
+namespace TestComp
+{
+    [default_interface]
+    runtimeclass Test
+    {
+        Test();
+    Double add(Double firstNumber, Double secondNumber);
+    }
+}

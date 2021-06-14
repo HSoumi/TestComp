@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>TestComp</id>
+    <version>0.1.0-prerelease</version>
+    <authors>Contoso Math Inc.</authors>
+    <description>A test component with basic addition math operation</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.0" />
+      <group targetFramework="UAP10.0" />
+      <group targetFramework=".NETFramework4.6" />
+      <group targetFramework="net5.0">
+        <dependency id="Microsoft.Windows.CsWinRT" version="1.2.6" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <!--Support netcore3, uap, net46+, net5, c++ -->
+    <file src="..\..\_build\x64\Debug\TestComp\bin\TestComp\TestComp.winmd" target="lib\netcoreapp3.0\TestComp.winmd" />
+    <file src="..\..\_build\x64\Debug\TestComp\bin\TestComp\TestComp.winmd" target="lib\uap10.0\TestComp.winmd" />
+    <file src="..\..\_build\x64\Debug\TestComp\bin\TestComp\TestComp.winmd" target="lib\net46\TestComp.winmd" />
+    <file src="..\..\_build\x64\Debug\TestProj\bin\TestProj.dll" target="lib\net5.0\TestProj.dll" />
+    <file src="..\..\_build\x64\Debug\TestComp\bin\TestComp\TestComp.dll" target="runtimes\win10-x64\native\TestComp.dll" />
+  </files>
+</package>
